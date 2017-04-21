@@ -1,0 +1,19 @@
+﻿<Window x:Name="ProductWindow" x:Class="distant_orders_kdz.WindowProducts"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:distant_orders_kdz"
+        mc:Ignorable="d"
+        Title="WindowProducts" Height="463" Width="702">
+    <Grid x:Name="ProductGrid" Margin="0,0,2,-1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="button_Cart" Content="Добавить выбранное в корзину" HorizontalAlignment="Center" Margin="136,347,104,0" VerticalAlignment="Top" Width="452" Height="44" Background="#FFFFFCFC" FontFamily="Verdana"/>
+        <Label x:Name="label" Content="Products" HorizontalAlignment="Center" Margin="300,33,296,0" VerticalAlignment="Top" FontFamily="Verdana" FontSize="20" Height="33" Grid.ColumnSpan="2"/>
+        <DataGrid x:Name="dataGrid_products" HorizontalAlignment="Center" Margin="62,66,55,0" VerticalAlignment="Top" Height="243" Width="575" FontFamily="Verdana"/>
+
+    </Grid>
+</Window>
