@@ -27,8 +27,8 @@ namespace distant_orders_kdz
         private void button_adduser_Click(object sender, RoutedEventArgs e)
         {
             WindowSignUp m = new WindowSignUp();
-            m.Close();
             AddUser.Adding(textBox_name.Text, textBox_surname.Text, textBox_mail.Text, textBox_password.Text);
+            m.Close();
         }
     }
 }

@@ -13,7 +13,7 @@
         </Grid.ColumnDefinitions>
         <Button x:Name="button_Cart" Content="Добавить выбранное в корзину" HorizontalAlignment="Center" Margin="136,347,104,0" VerticalAlignment="Top" Width="452" Height="44" Background="#FFFFFCFC" FontFamily="Verdana"/>
         <Label x:Name="label" Content="Products" HorizontalAlignment="Center" Margin="300,33,296,0" VerticalAlignment="Top" FontFamily="Verdana" FontSize="20" Height="33" Grid.ColumnSpan="2"/>
-        <DataGrid x:Name="dataGrid_products" HorizontalAlignment="Center" Margin="62,66,55,0" VerticalAlignment="Top" Height="243" Width="575" FontFamily="Verdana"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="217" Margin="104,71,0,0" VerticalAlignment="Top" Width="516"/>
 
     </Grid>
 </Window>

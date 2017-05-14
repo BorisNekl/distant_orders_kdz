@@ -11,11 +11,11 @@ namespace distant_orders_kdz
     {
         public static void Adding( string n, string s, string m, string p)
         {
-            using (FileStream fs = new FileStream("../../Users.txt", FileMode.OpenOrCreate))
+            using (FileStream fs = new FileStream("Users.txt", FileMode.OpenOrCreate))
             {
                 using (StreamWriter sw = new StreamWriter(fs))
                 {
-                    sw.Write(n + s + m + p);
+                    sw.Write(n + ' ' + s + ' ' + m + ' ' + p);
                     sw.WriteLine();
                 }
             }
