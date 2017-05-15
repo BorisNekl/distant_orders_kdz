@@ -19,6 +19,13 @@ namespace distant_orders_kdz
     /// </summary>
     public partial class WindowSignUp : Window
     {
+        private User _newuser = new User();
+
+        public User newuser
+        {
+            get { return _newuser; }
+        }
+
         public WindowSignUp()
         {
             InitializeComponent();
@@ -26,9 +33,32 @@ namespace distant_orders_kdz
 
         private void button_adduser_Click(object sender, RoutedEventArgs e)
         {
-            WindowSignUp m = new WindowSignUp();
-            AddUser.Adding(textBox_name.Text, textBox_surname.Text, textBox_mail.Text, textBox_password.Text);
-            m.Close();
+            if (string.IsNullOrWhiteSpace(textBox_name.Text))
+            {
+                MessageBox.Show("Введите имя", "ОШИБКА");
+                textBox_name.Focus();
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(textBox_surname.Text))
+            {
+                MessageBox.Show("Введите фамилию", "ОШИБКА");
+                textBox_surname.Focus();
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(textBox_mail.Text))
+            {
+                MessageBox.Show("Введите почту", "ОШИБКА");
+                textBox_mail.Focus();
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(textBox_password.Text))
+            {
+                MessageBox.Show("Введите пароль", "ОШИБКА");
+                textBox_password.Focus();
+                return;
+            }
+            _newuser = new User(textBox_name.Text, textBox_surname.Text, textBox_mail.Text, textBox_password.Text);
+            DialogResult = true;
         }
     }
 }

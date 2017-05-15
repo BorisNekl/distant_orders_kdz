@@ -7,7 +7,7 @@ using System.IO;
 
 namespace distant_orders_kdz
 {
-    class User
+    public class User
     {
         private string name;
 
@@ -48,17 +48,11 @@ namespace distant_orders_kdz
             this.mail = mail;
             this.password = password;
         }
-        
-        public static void AddUser(string n, string s, string m, string p)
+
+        public User()
         {
-            using (FileStream fs = new FileStream("Users.txt", FileMode.OpenOrCreate))
-            {
-                using (StreamWriter sw = new StreamWriter(fs))
-                {
-                    sw.Write(n + ' ' + s + ' ' + m + ' ' + p);
-                    sw.WriteLine();
-                }
-            }
+
         }
+
     }
 }

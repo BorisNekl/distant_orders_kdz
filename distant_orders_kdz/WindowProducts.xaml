@@ -6,14 +6,15 @@
         xmlns:local="clr-namespace:distant_orders_kdz"
         mc:Ignorable="d"
         Title="WindowProducts" Height="463" Width="702">
-    <Grid x:Name="ProductGrid" Margin="0,0,2,-1">
+    <Grid x:Name="ProductGrid" Margin="0,0,-8,-21">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="button_Cart" Content="Добавить выбранное в корзину" HorizontalAlignment="Center" Margin="136,347,104,0" VerticalAlignment="Top" Width="452" Height="44" Background="#FFFFFCFC" FontFamily="Verdana"/>
-        <Label x:Name="label" Content="Products" HorizontalAlignment="Center" Margin="300,33,296,0" VerticalAlignment="Top" FontFamily="Verdana" FontSize="20" Height="33" Grid.ColumnSpan="2"/>
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="217" Margin="104,71,0,0" VerticalAlignment="Top" Width="516"/>
+        <Button x:Name="button_Add" Content="Add to cart" HorizontalAlignment="Center" Margin="121,302,129,0" VerticalAlignment="Top" Width="452" Height="44" Background="#FFFFFCFC" FontFamily="Verdana" Click="button_Add_Click"/>
+        <Label x:Name="label" Content="Products" HorizontalAlignment="Center" Margin="299,23,307,0" VerticalAlignment="Top" FontFamily="Verdana" FontSize="20" Height="33"/>
+        <ListBox x:Name="listBoxProducts" DisplayMemberPath="showInfo" HorizontalAlignment="Center" Height="217" Margin="91,71,95,0" VerticalAlignment="Top" Width="516"/>
+        <Button x:Name="button_Cart" Content="Go to cart" HorizontalAlignment="Center" Height="40" Margin="121,362,129,0" FontFamily="Verdana" VerticalAlignment="Top" Width="452"/>
 
     </Grid>
 </Window>
