@@ -5,16 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:distant_orders_kdz"
         mc:Ignorable="d"
-        Title="WindowProducts" Height="463" Width="702">
-    <Grid x:Name="ProductGrid" Margin="0,0,-8,-21">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="Auto"/>
-        </Grid.ColumnDefinitions>
-        <Button x:Name="button_Add" Content="Add to cart" HorizontalAlignment="Center" Margin="121,302,129,0" VerticalAlignment="Top" Width="452" Height="44" Background="#FFFFFCFC" FontFamily="Verdana" Click="button_Add_Click"/>
-        <Label x:Name="label" Content="Products" HorizontalAlignment="Center" Margin="299,23,307,0" VerticalAlignment="Top" FontFamily="Verdana" FontSize="20" Height="33"/>
-        <ListBox x:Name="listBoxProducts" DisplayMemberPath="showInfo" HorizontalAlignment="Center" Height="217" Margin="91,71,95,0" VerticalAlignment="Top" Width="516"/>
-        <Button x:Name="button_Cart" Content="Go to cart" HorizontalAlignment="Center" Height="40" Margin="121,362,129,0" FontFamily="Verdana" VerticalAlignment="Top" Width="452"/>
+        Title="WindowProducts" Height="514" Width="1006.5">
+    <ScrollViewer HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="10,10,0,0">
+        <Grid x:Name="ProductGrid" Margin="0,0,-8,-21">
+            <Frame x:Name="ProductFrame" NavigationUIVisibility = "Hidden"/>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
 
-    </Grid>
+        </Grid>
+    </ScrollViewer>
 </Window>

@@ -55,10 +55,28 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Order.cs" />
+    <Compile Include="PageCart.xaml.cs">
+      <DependentUpon>PageCart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageProduct.xaml.cs">
+      <DependentUpon>PageProduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages.cs" />
+    <Compile Include="PageUserOrders.xaml.cs">
+      <DependentUpon>PageUserOrders.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Product.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="UserOrder.cs" />
+    <Compile Include="WindowChange.xaml.cs">
+      <DependentUpon>WindowChange.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WindowProducts.xaml.cs">
       <DependentUpon>WindowProducts.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowSearch.xaml.cs">
+      <DependentUpon>WindowSearch.xaml</DependentUpon>
     </Compile>
     <Compile Include="WindowSignIn.xaml.cs">
       <DependentUpon>WindowSignIn.xaml</DependentUpon>
@@ -78,7 +96,27 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PageCart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageUserOrders.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowChange.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WindowProducts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowSearch.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

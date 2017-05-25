@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Security.Cryptography;
 
 namespace distant_orders_kdz
 {
@@ -35,30 +36,45 @@ namespace distant_orders_kdz
         {
             if (string.IsNullOrWhiteSpace(textBox_name.Text))
             {
-                MessageBox.Show("Введите имя", "ОШИБКА");
+                MessageBox.Show("Name can't be empty", "ERROR");
                 textBox_name.Focus();
                 return;
             }
             if (string.IsNullOrWhiteSpace(textBox_surname.Text))
             {
-                MessageBox.Show("Введите фамилию", "ОШИБКА");
+                MessageBox.Show("Surname can't be empty", "ERROR");
                 textBox_surname.Focus();
                 return;
             }
             if (string.IsNullOrWhiteSpace(textBox_mail.Text))
             {
-                MessageBox.Show("Введите почту", "ОШИБКА");
+                MessageBox.Show("Mail can't be empty", "ERROR");
                 textBox_mail.Focus();
                 return;
             }
-            if (string.IsNullOrWhiteSpace(textBox_password.Text))
+            if (string.IsNullOrWhiteSpace(passwordBox_1.Password))
             {
-                MessageBox.Show("Введите пароль", "ОШИБКА");
-                textBox_password.Focus();
+                MessageBox.Show("Password can't be empty", "ERROR");
+                passwordBox_1.Focus();
                 return;
             }
-            _newuser = new User(textBox_name.Text, textBox_surname.Text, textBox_mail.Text, textBox_password.Text);
-            DialogResult = true;
+            if(passwordBox_1.Password == passwordBox_2.Password)
+            {
+                _newuser = new User(textBox_name.Text, textBox_surname.Text, textBox_mail.Text, hash(passwordBox_1.Password), false);
+                DialogResult = true;
+            }
+            else
+            {
+                MessageBox.Show("Inserted passwords are different", "ERROR");
+            }
+            
+        }
+
+        private string hash(string password)
+        {
+            MD5 md5 = MD5.Create();
+            var hash = md5.ComputeHash(Encoding.ASCII.GetBytes(password));
+            return Convert.ToBase64String(hash);
         }
     }
 }

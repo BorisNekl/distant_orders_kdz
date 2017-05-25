@@ -1,0 +1,24 @@
+﻿<Page x:Class="distant_orders_kdz.PageProduct"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:distant_orders_kdz"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="PageProduct"  Height="463" Width="900">
+
+    <Grid Margin="0,0,-8,-21">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="button_signin" Content="Sign in"  HorizontalAlignment="Right" Margin="0,4,29,0" VerticalAlignment="Top" Width="75" FontFamily="Verdana" Background="White" BorderBrush="White" Foreground="#FF20B4E0" Click="button_signin_Click" />
+        <Button x:Name="button_signup" Content="Sign up" HorizontalAlignment="Right" Margin="0,4,127,0" VerticalAlignment="Top" Width="75" Background="White" FontFamily="Verdana" BorderBrush="White" Foreground="#FF20B4E0" Click="button_signup_Click"/>
+        <Button x:Name="button_Add" Content="Add to cart" HorizontalAlignment="Center" Margin="121,302,129,0" VerticalAlignment="Top" Width="452" Height="44" Background="#FFFFFCFC" FontFamily="Verdana" Click="button_Add_Click" IsEnabled="False"/>
+        <Label x:Name="label" Content="Products" HorizontalAlignment="Center" Margin="299,23,307,0" VerticalAlignment="Top" FontFamily="Verdana" FontSize="20" Height="33"/>
+        <ListBox x:Name="listBoxProducts" SelectionChanged="SelectionChanged" DisplayMemberPath="showInfo" HorizontalAlignment="Center" Height="217" Margin="91,71,95,0" VerticalAlignment="Top" Width="516"/>
+        <Button x:Name="button_Cart" Content="Go to cart" HorizontalAlignment="Center" Height="40" Margin="121,362,129,0" FontFamily="Verdana" VerticalAlignment="Top" Width="452" Click="button_Cart_Click"/>
+        <Button x:Name="button_orders" Content="Your orders" HorizontalAlignment="Left" Margin="577,4,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.093,-0.05" Click="button_orders_Click"/>
+    </Grid>
+</Page>

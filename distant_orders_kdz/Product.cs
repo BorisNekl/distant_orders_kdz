@@ -28,18 +28,28 @@ namespace distant_orders_kdz
             this.title = title;
             this.price = price;
         }
-
-        public string showInfo()
+        public Product()
         {
-            return string.Format("{0} {1}", title, price);
+
+        }
+        public string showInfo
+        {
+            get
+            {
+                return string.Format("{0} {1}", title, price);
+            }
+        }
+        public string Info()
+        {
+                return string.Format("{0} {1}", title, price);
         }
         static List<Product> products = new List<Product>();
         static string[] fileArray = null;
         public static List<Product> Read()
         {
-            if (File.Exists("../../catalog.txt"))
+            if (File.Exists("catalog.txt"))
             {
-                fileArray = File.ReadAllLines("../../catalog.txt");
+                fileArray = File.ReadAllLines("catalog.txt");
                 foreach (string str in fileArray)
                 {
                     string t = str.Split(' ')[0];

@@ -23,30 +23,38 @@ namespace distant_orders_kdz
     public partial class MainWindow : Window
     {
         List<User> users = new List<User>();
-
         public MainWindow()
         {
             InitializeComponent();
+            DeserializeUser();
         }
 
         private void button_start_Click(object sender, RoutedEventArgs e)
         {
+            this.Hide();
             WindowProducts a = new WindowProducts();
-            MainWindow m = new MainWindow();
-            m.Close();
-            a.Show();
+            a.ShowDialog();
+            foreach (User u in users)
+            {
+                if (u.Check)
+                    u.Check = false;
+            }
+            SerializeUser();
+            this.Close();
         }
 
         private void button_signup_Click(object sender, RoutedEventArgs e)
         {
+            this.Hide();
             WindowSignUp a = new WindowSignUp();
-            if(a.ShowDialog().Value)
+            if (a.ShowDialog().Value)
             {
                 users.Add(a.newuser);
-                serializeUser();
+                SerializeUser();
             }
+            this.Show();
         }
-        private void serializeUser()
+        private void SerializeUser()
         {
             using (FileStream fs = new FileStream("users.xml", FileMode.Create))
             {
@@ -54,7 +62,7 @@ namespace distant_orders_kdz
                 ser.Serialize(fs, users);
             }
         }
-        private void deserialization()
+        private void DeserializeUser()
         {
             if (File.Exists("users.xml"))
             {
