@@ -14,10 +14,11 @@
         <TextBox x:Name="textBox_surname" HorizontalAlignment="Left" Height="25" Margin="187,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="326" FontFamily="Verdana"/>
         <Label x:Name="label_mail" Content="e-mail" HorizontalAlignment="Left" Margin="130,119,0,0" VerticalAlignment="Top" FontFamily="Verdana"/>
         <TextBox x:Name="textBox_mail" HorizontalAlignment="Left" Height="23" Margin="187,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="326" FontFamily="Verdana"/>
-        <Label x:Name="label_pass" Content="Password" HorizontalAlignment="Left" Margin="113,149,0,0" VerticalAlignment="Top" Width="65" FontFamily="Verdana"/>
-        <Button x:Name="button_adduser" Content="Sign up" HorizontalAlignment="Center" Margin="0,238,0,0" VerticalAlignment="Top" Width="159" FontFamily="Verdana" FontSize="20" Background="White" Click="button_adduser_Click"/>
         <PasswordBox x:Name="passwordBox_1" HorizontalAlignment="Left" Margin="187,149,0,0" Height="23" VerticalAlignment="Top" Width="326"/>
         <PasswordBox x:Name="passwordBox_2" HorizontalAlignment="Left" Height="23"  Margin="187,179,0,0" VerticalAlignment="Top" Width="326"/>
+        <Label x:Name="label_pass" Content="Password" HorizontalAlignment="Left" Margin="113,149,0,0" VerticalAlignment="Top" Width="65" FontFamily="Verdana"/>
+        <Button x:Name="button_adduser" Content="Sign up" HorizontalAlignment="Center" Margin="0,238,0,0" VerticalAlignment="Top" Width="159" FontFamily="Verdana" FontSize="20" Background="White" Click="button_adduser_Click"/>
+        
         <Label x:Name="label_password2" Content="Repeat your password" HorizontalAlignment="Left" FontFamily="Verdana" Margin="33,177,0,0" VerticalAlignment="Top" Width="145"/>
 
     </Grid>

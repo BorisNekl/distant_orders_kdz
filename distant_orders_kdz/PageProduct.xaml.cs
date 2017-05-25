@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 using System.Xml.Serialization;
+using System.Windows.Media.Animation;
 
 namespace distant_orders_kdz
 {
@@ -45,6 +46,16 @@ namespace distant_orders_kdz
         public PageProduct()
         {
             InitializeComponent();
+            DoubleAnimation widthanimation = new DoubleAnimation();
+            widthanimation.From = button_Cart.ActualWidth;
+            widthanimation.To = 460;
+            widthanimation.Duration = TimeSpan.FromSeconds(3);
+            DoubleAnimation heightanimation = new DoubleAnimation();
+            heightanimation.From = button_Cart.ActualHeight;
+            heightanimation.To = 45;
+            heightanimation.Duration = TimeSpan.FromSeconds(3);
+            button_Cart.BeginAnimation(Button.WidthProperty, widthanimation);
+            button_Cart.BeginAnimation(Button.HeightProperty, heightanimation);
             DeserializeUser();
             ShowProduct();
             listBoxProducts.ItemsSource = null;

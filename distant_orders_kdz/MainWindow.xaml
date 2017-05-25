@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:distant_orders_kdz"
         mc:Ignorable="d"
-        Title="MainWindow" Height="316" Width="599" HorizontalAlignment="Left">
+        Title="Start Window" Height="316" Width="599" HorizontalAlignment="Left">
     <Grid Margin="0,0,2,4">
         <Label x:Name="label" Content="Distant orders application" Margin="229,52,0,0" VerticalAlignment="Top" Height="25" Width="168" FontFamily="Verdana" RenderTransformOrigin="0.388,0.464" HorizontalAlignment="Left"/>
         <Button x:Name="button_signin" Content="Sign in"  HorizontalAlignment="Right" Margin="348,4,0,0" VerticalAlignment="Top" Width="75" FontFamily="Verdana" Background="White" BorderBrush="White" Foreground="#FF20B4E0" Click="button_signin_Click"/>

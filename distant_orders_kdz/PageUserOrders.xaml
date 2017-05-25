@@ -12,7 +12,15 @@
         </Grid.ColumnDefinitions>
         <DataGrid x:Name="dataGrid_order" SelectionChanged="SelectionChanged" HorizontalAlignment="Left" Height="377" Margin="10,69,0,0" VerticalAlignment="Top" Width="681"/>
         <Button x:Name="button_delete" Content="Delete" HorizontalAlignment="Right" Height="54" Margin="0,145,75,0" VerticalAlignment="Top" Width="174" Click="button_delete_Click" IsEnabled="False"/>
-        <Button x:Name="button_change" Content="Change" HorizontalAlignment="Right" Height="56" Margin="0,69,75,0" VerticalAlignment="Top" Width="174" IsEnabled="False" Click="button_change_Click"/>
+        <Button x:Name="button_change" Content="Change" HorizontalAlignment="Right" Height="56" Margin="0,69,75,0" VerticalAlignment="Top" Width="174" IsEnabled="False" Click="button_change_Click">
+            <Button.ToolTip>
+                <ToolTip Background="#90004455">
+                    <StackPanel>
+                        <TextBlock Margin="3" Foreground="White">If you don't want to change any property then just leave a blank space</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Button.ToolTip>
+        </Button>
         <Label x:Name="label" Content="Your orders" FontSize="30" HorizontalAlignment="Center"  Height="54" Margin="375,10,341,0" FontFamily="Verdana" VerticalAlignment="Top" Width="184"/>
         <Button x:Name="button_add" Content="Add Order" HorizontalAlignment="Right" Margin="0,222,75,0" Height="56" VerticalAlignment="Top" Width="174" Click="button_add_Click"/>
         <Button x:Name="button_search" Content="Search"  HorizontalAlignment="Right" Margin="0,312,75,0" Height="56" VerticalAlignment="Top" Width="174" Click="button_search_Click"></Button>
